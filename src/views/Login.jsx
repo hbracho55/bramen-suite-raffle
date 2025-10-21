@@ -141,8 +141,8 @@ const Login = ({ mode }) => {
         </div>
         <div className='flex flex-col gap-5 is-full sm:is-auto md:is-full sm:max-is-[400px] md:max-is-[unset]'>
           <div>
-            <Typography variant='h4'>{`Bienvenido a ${themeConfig.templateName}!👋🏻`}</Typography>
-            <Typography>Por favor inicia sesión con tu cuenta</Typography>
+            <Typography variant='h4'>{`Welcome to ${themeConfig.templateName}!👋🏻`}</Typography>
+            <Typography>Please sign-in to your account and start the adventure</Typography>
           </div>
           <Alert icon={false} className='bg-primaryLight'>
             <Typography variant='body2' color='primary'>
@@ -167,9 +167,8 @@ const Login = ({ mode }) => {
                   {...field}
                   fullWidth
                   autoFocus
-                  variant='standard'
                   type='email'
-                  label='Correo'
+                  label='Email'
                   onChange={e => {
                     field.onChange(e.target.value)
                     errorState !== null && setErrorState(null)
@@ -189,9 +188,8 @@ const Login = ({ mode }) => {
                 <TextField
                   {...field}
                   fullWidth
-                  label='Contraseña'
+                  label='Password'
                   id='login-password'
-                  variant='standard'
                   type={isPasswordShown ? 'text' : 'password'}
                   onChange={e => {
                     field.onChange(e.target.value)
@@ -217,22 +215,22 @@ const Login = ({ mode }) => {
               )}
             />
             <div className='flex justify-between items-center flex-wrap gap-x-3 gap-y-1'>
-              <FormControlLabel control={<Checkbox defaultChecked />} label='Recordar mis datos' />
+              <FormControlLabel control={<Checkbox defaultChecked />} label='Remember me' />
               <Typography className='text-end' color='primary' component={Link} href='/forgot-password'>
-                Olvidaste tu contraseña?
+                Forgot password?
               </Typography>
             </div>
             <Button fullWidth variant='contained' type='submit'>
-              Iniciar Sesión
+              Log In
             </Button>
             <div className='flex justify-center items-center flex-wrap gap-2'>
-              <Typography>No estás registrado?</Typography>
+              <Typography>New on our platform?</Typography>
               <Typography component={Link} href='/register' color='primary'>
-                Crea tu cuenta
+                Create an account
               </Typography>
             </div>
           </form>
-          <Divider className='gap-3'>o</Divider>
+          <Divider className='gap-3'>or</Divider>
           <Button
             color='secondary'
             className='self-center text-textPrimary'
@@ -240,7 +238,7 @@ const Login = ({ mode }) => {
             sx={{ '& .MuiButton-startIcon': { marginInlineEnd: 3 } }}
             onClick={() => signIn('google')}
           >
-            Inicia sesión con tu cuenta de Google
+            Sign in with Google
           </Button>
         </div>
       </div>

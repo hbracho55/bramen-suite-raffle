@@ -19,7 +19,7 @@ const themeConfig = {
   templateName: 'BRAMEN',
   homePageUrl: '/dashboards/crm',
   settingsCookieName: 'materio-mui-next-demo-1',
-  mode: 'light', // 'system', 'light', 'dark'
+  mode: 'system', // 'system', 'light', 'dark'
   skin: 'default', // 'default', 'bordered'
   semiDark: false, // true, false
   layout: 'vertical', // 'vertical', 'collapsed', 'horizontal'

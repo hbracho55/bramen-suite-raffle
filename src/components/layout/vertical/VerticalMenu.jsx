@@ -75,17 +75,6 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
           <MenuItem href={`/${locale}/request/manage`}>{dictionary['navigation'].manage}</MenuItem>
           <MenuItem href={`/${locale}/request/search`}>{dictionary['navigation'].search}</MenuItem>
           <MenuItem href={`/${locale}/request/assign`}>{dictionary['navigation'].assign}</MenuItem>
-          <SubMenu label={dictionary['navigation'].settings}>
-            <MenuItem href={`/${locale}/request/settings/unit-options`}>
-              {dictionary['navigation'].unitoptions}
-            </MenuItem>
-            <MenuItem href={`/${locale}/request/settings/services`}>{dictionary['navigation'].services}</MenuItem>
-            <MenuItem href={`/${locale}/request/settings/products`}>{dictionary['navigation'].products}</MenuItem>
-            <MenuItem href={`/${locale}/request/settings/activities`}>{dictionary['navigation'].activities}</MenuItem>
-            <MenuItem href={`/${locale}/request/settings/priorities`}>{dictionary['navigation'].priorities}</MenuItem>
-            <MenuItem href={`/${locale}/request/settings/templates`}>{dictionary['navigation'].templates}</MenuItem>
-            <MenuItem href={`/${locale}/request/settings/workflows`}>{dictionary['navigation'].workflows}</MenuItem>
-          </SubMenu>
         </SubMenu>
         <SubMenu label={dictionary['navigation'].servicecenter} icon={<i className='ri-customer-service-line' />}>
           <MenuItem href={`/${locale}/servicecenter/dashboard`}>{dictionary['navigation'].dashboard}</MenuItem>
@@ -95,19 +84,6 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
           <MenuItem href={`/${locale}/servicecenter/search`}>{dictionary['navigation'].search}</MenuItem>
           <MenuItem href={`/${locale}/servicecenter/manage`}>{dictionary['navigation'].manage}</MenuItem>
           <MenuItem href={`/${locale}/servicecenter/tracking`}>{dictionary['navigation'].tracking}</MenuItem>
-        </SubMenu>
-        <SubMenu label={dictionary['navigation'].basicdata} icon={<i className='ri-expand-left-right-line' />}>
-          <MenuItem href={`/${locale}/request/dashboard`}>{dictionary['navigation'].people}</MenuItem>
-          <MenuItem href={`/${locale}/request/register`}>{dictionary['navigation'].users}</MenuItem>
-          <MenuItem href={`/${locale}/request/pending`}>{dictionary['navigation'].groups}</MenuItem>
-          <MenuItem href={`/${locale}/basicdata/nodes`}>{dictionary['navigation'].nodes}</MenuItem>
-          <MenuItem href={`/${locale}/request/assign`}>{dictionary['navigation'].jobs}</MenuItem>
-          <MenuItem href={`/${locale}/request/draft`}>{dictionary['navigation'].units}</MenuItem>
-          <MenuItem href={`/${locale}/request/manage`}>{dictionary['navigation'].priorities}</MenuItem>
-          <MenuItem href={`/${locale}/request/search`}>{dictionary['navigation'].levels}</MenuItem>
-          <MenuItem href={`/${locale}/request/assign`}>{dictionary['navigation'].states}</MenuItem>
-          <MenuItem href={`/${locale}/request/assign`}>{dictionary['navigation'].calendars}</MenuItem>
-          <MenuItem href={`/${locale}/request/assign`}>{dictionary['navigation'].locations}</MenuItem>
         </SubMenu>
         <SubMenu
           label={dictionary['navigation'].dashboards}

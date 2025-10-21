@@ -6,6 +6,7 @@ import { useParams } from 'next/navigation'
 import classnames from 'classnames'
 
 // Component Imports
+import LanguageDropdown from '@components/layout/shared/LanguageDropdown'
 import Logo from '@components/layout/shared/Logo'
 import ModeDropdown from '@components/layout/shared/ModeDropdown'
 import NotificationsDropdown from '@components/layout/shared/NotificationsDropdown'
@@ -131,6 +132,7 @@ const NavbarContent = () => {
       <div className='flex items-center'>
         <NavSearch />
         <CurrentUnit />
+        <LanguageDropdown />
         <ModeDropdown />
         <ShortcutsDropdown shortcuts={shortcuts} />
         <NotificationsDropdown notifications={notifications} />

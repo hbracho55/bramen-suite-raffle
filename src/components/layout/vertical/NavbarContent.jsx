@@ -2,6 +2,7 @@
 import classnames from 'classnames'
 
 // Component Imports
+import LanguageDropdown from '@components/layout/shared/LanguageDropdown'
 import ModeDropdown from '@components/layout/shared/ModeDropdown'
 import NotificationsDropdown from '@components/layout/shared/NotificationsDropdown'
 import NavSearch from '@components/layout/shared/search'
@@ -109,6 +110,7 @@ const NavbarContent = () => {
       </div>
       <div className='flex items-center'>
         <CurrentUnit />
+        <LanguageDropdown />
         <ModeDropdown />
         <ShortcutsDropdown shortcuts={shortcuts} />
         <NotificationsDropdown notifications={notifications} />
