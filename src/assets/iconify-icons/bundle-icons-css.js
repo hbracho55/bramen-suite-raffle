@@ -12,6 +12,7 @@
  */
 import { promises as fs } from 'node:fs'
 import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'url';
 
 // Installation: npm install --save-dev @iconify/tools @iconify/utils @iconify/json @iconify/iconify
 import { cleanupSVG, importDirectory, isEmptyColor, parseColors, runSVGO } from '@iconify/tools'
@@ -20,7 +21,7 @@ import { getIcons, getIconsCSS, stringToIcon } from '@iconify/utils'
 const sources = {
   json: [
     // Iconify JSON file (@iconify/json is a package name, /json/ is directory where files are, then filename)
-    require.resolve('@iconify/json/json/ri.json')
+    import.meta.resolve('@iconify/json/json/ri.json')
 
     // Custom file with only few icons
     /* {
@@ -54,6 +55,11 @@ const sources = {
     } */
   ]
 }
+
+const __filename = fileURLToPath(import.meta.url);
+
+// 💡 Equivalente a __dirname en ESM
+const __dirname = dirname(__filename);
 
 // File to save bundle to
 const target = join(__dirname, 'generated-icons.css')
